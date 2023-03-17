@@ -83,16 +83,27 @@ html{
        margin: 2px; 
 }
 .icons{
-   margin-top: 10px;
+   margin-top: 0;
    position: absolute;
-   background-color: #020202;
+  color: #757070;
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  margin-left: 22.77%;
+  margin-top: .7%;
+
 }
+.fa-solid{
+   width: 30px;
+}
+
 /* home slider */
 .home .home-slider .slide{
    display: flex;
    align-items: center;
    height: 90vh;
-   justify-content: center;
+   justify-content: flex-start;
+   width: 100%;
    
 }
 .home .home-slider .slide1{
@@ -119,28 +130,200 @@ html{
  
    background-repeat: no-repeat;
    background-size: cover;
+   width: 100%;
 }
 .home .home-slider .slide .content{
    text-align: center;
    padding: 9rem;
 }
+.home .home-slider .slide .slide2  h2{
+   font-family: 'Metrophobic';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 44px;
+   text-align: justify;
+   text-transform: uppercase;
+   
+   color: 000000;
+}
+.home .home-slider .slide4 .content h2{
+   font-family: 'Metrophobic';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 44px;
+   text-align: justify;
+   text-transform: uppercase;
+   
+   color:#ffffff;
+}
 .home .home-slider .slide .content h2{
-   color: #ffffff;
+   color: #000000;
    font-size: 4rem;
    font-weight: 600;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: left;
 }
 .swiper-pagination-bullet
 {
    justify-content: center;
    align-items: center;
    text-align: center;
-   background-color: #f851c0;
+   background-color: #f30707;
    width: 15px !important;
    height: 15px !important;
    border: 50px !important;
 }
+
 /* end of home slider */
+/* product section */
+.products h1{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 46px;
+line-height: 62px;
+/* identical to box height, or 111% */
+
+text-align: center;
+letter-spacing: -2.4px;
+color: #000000;
+margin-top: 50px;
+}
+.products p{
+   font-family: 'Public Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 28px;
+text-align: center;
+letter-spacing: -0.4px;
+color: #979797;
+margin-top: 20px;
+mix-blend-mode: normal;
+}
+.products .product-row{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   grid-gap:1rem;
+   margin-left: 10%;
+ margin-bottom: 100px;
+   
+}
+.products .product-row h2{
+   font-size: 2rem;
+   font-weight: 400;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 36px;
+}
+.products .product-row .content{
+   margin-bottom: 50px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  
+  
+}
+.products .product-row .product-items{
+   margin-top: 3rem;
+   box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+   width: 80%;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 2rem .4rem;
+}
+.products .product-row .product-items img{
+   width: 100%;
+}
+.products .product-row .product-items:hover{
+width: 87%;
+  border-spacing: 5rem;
+  transform: translateY(-50px);
+  transform: translateX(-10px);
+}
+/* product section end */
+/* collection */
+.featured{
+ text-align: center;
+ margin: 50px;
+}
+.featured h1{
+   font-size: 5rem;
+   font-weight: 600;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 46px;
+}
+.featured p{
+   font-size: 2rem;
+   font-weight: 400;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 36px;
+   margin-top: 20px;
+}
+.featured .featured-row{
+   display: grid;
+   grid-column: 2rem;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   
+}
+.featured .featured-row .featured-items {
+   margin-top: 2rem;
+ 
+}
+.featured .featured-row .featured-items img{
+   width: 200px;
+   height: 250px;
+   margin-bottom: 2rem;
+ 
+
+}
+span{
+   font-size: 16px;
+   margin-left: 2rem;
+   color: rgb(243, 65, 11);
+}
+.fa-cart-shopping{
+   font-size: 2rem;
+   word-spacing: 2rem;
+   color: rgb(243, 65, 11);
+   cursor: pointer;
+ margin-right: 3rem;
+  float: right;
+}
+.featured .featured-row .featured-items .content{
+   background-color: #ffffff;
+   padding-top: 2rem;
+   padding-bottom: 1rem;
+   text-align: left;
+   
+}
+.featured .featured-row .featured-items .content h3{
+   margin-left: 2rem;
+   font-size: 1.3rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 400;
+   line-height: 30px;
+}
+
+.card{
+   border: .6px solid#dbdbdb;
+   margin: 2rem;
+   border-radius: 10px;
+   background-color: #dbdbdb;
+   cursor: pointer;
+}
+.card:hover{
+
+   box-shadow: 0px 7px 10px rgba(158, 153, 153, 0.5);
+   transform: translateY(-20px);
+   transform: translateX(-8px);
+}
+/* end of collection */
+
 @media (max-width: 700px) {
    .toggle-button.active .bars:nth-child(2){
       opacity: 0;
@@ -212,4 +395,31 @@ padding: 1.5rem
        transition: 0.3s;
        color: aquamarine;
    }
+   /* home slide  */
+   /* .swiper-button-next{
+      height: 2px;
+      width: 2px;
+    }
+    .swiper-button-prev{
+       height: 2px;
+       width: 2px;
+    } */
+    .home .home-slider .slide .content h2{
+      color: #000000;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: left;
+      line-height: 30px;
+   }
+   .home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3,
+.home .home-slider .slide4{
+ 
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+}
+   /* end home slide */
 }
