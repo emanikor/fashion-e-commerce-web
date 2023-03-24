@@ -207,7 +207,7 @@ mix-blend-mode: normal;
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
    grid-gap:1rem;
    margin-left: 10%;
  margin-bottom: 100px;
@@ -229,27 +229,27 @@ mix-blend-mode: normal;
 }
 .products .product-row .product-items{
    margin-top: 3rem;
-   box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
-   width: 80%;
+ 
+   width: 100%;
    justify-content: center;
    align-items: center;
    text-align: center;
-   padding: 2rem .4rem;
+   /* padding: 2rem .4rem; */
 }
 .products .product-row .product-items img{
    width: 100%;
 }
-.products .product-row .product-items:hover{
+/* .products .product-row .product-items:hover{
 width: 87%;
   border-spacing: 5rem;
   transform: translateY(-50px);
   transform: translateX(-10px);
-}
+} */
 /* product section end */
 /* collection */
 .featured{
  text-align: center;
- margin: 50px;
+ margin: 80px;
 }
 .featured h1{
    font-size: 5rem;
@@ -268,16 +268,22 @@ width: 87%;
    display: grid;
    grid-column: 2rem;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   padding: .1rem 2rem;
    
 }
 .featured .featured-row .featured-items {
-   margin-top: 2rem;
- 
+   /* padding: 2rem; */
+   padding: .5rem;
 }
 .featured .featured-row .featured-items img{
-   width: 200px;
-   height: 250px;
+   width: 180px;
+   height: 230px;
+   /* margin-left: 5rem; */
    margin-bottom: 2rem;
+   justify-content: center;
+   align-items: center;
+  
+   
  
 
 }
@@ -293,12 +299,21 @@ span{
    cursor: pointer;
  margin-right: 3rem;
   float: right;
+  border-radius: 50px;
+
+ padding: .3rem;
+  
+  
+}
+.fa-cart-shopping:hover{
+ background-color: #fdc5c5;
 }
 .featured .featured-row .featured-items .content{
    background-color: #ffffff;
    padding-top: 2rem;
    padding-bottom: 1rem;
    text-align: left;
+   width: 100%;
    
 }
 .featured .featured-row .featured-items .content h3{
@@ -315,13 +330,19 @@ span{
    border-radius: 10px;
    background-color: #dbdbdb;
    cursor: pointer;
+   width:100%;
+   /* align-items: center;
+   justify-content: center; */
+   /* justify-content: center;
+   align-items: center;
+   display: flex; */
 }
-.card:hover{
+/* .card:hover{
 
    box-shadow: 0px 7px 10px rgba(158, 153, 153, 0.5);
    transform: translateY(-20px);
    transform: translateX(-8px);
-}
+} */
 /* end of collection */
 
 @media (max-width: 700px) {
@@ -340,8 +361,7 @@ span{
        display: flex;
        margin-right: 50px;
      margin-top: 1rem;
-       transition: 0.3s;
-       
+       transition: 0.3s;   
    }
    .brand-title{
       width: 10px;
@@ -349,7 +369,7 @@ span{
    .navbar-links{
       display: none; 
       width: 100%;
-      top:-100%;
+      top:100%;
       right: -100%;
       transition: transform 0.3s ease-in;
 margin-top: 20px;
@@ -421,5 +441,97 @@ padding: 1.5rem
    background-size: cover;
    width: 100%;
 }
-   /* end home slide */
+.icons{
+display: none;
 }
+/* menu responsive */
+.menu-btn{
+   /* font-family: var(--Inter); */
+   text-transform: uppercase;
+   font-size: 13px;
+ 
+
+ }
+ .featured{
+   text-align: center;
+   margin: 10px;
+  }
+ .featured .featured-row .featured-items {
+  margin-top: 0;
+   padding: none;
+}
+
+}
+/* .toggle-button .icons{
+   display: flex;
+   margin-right:1rem ;
+ margin-top: 1rem;
+   transition: 0.3s;   
+} */
+/* .toggle-button .icons .fa-cart-shopping{
+ margin-right: 30rem;
+} */
+   /* end home slide */
+
+.fa-user{
+   margin-bottom: 10px;
+ font-size: 2rem;
+ color: #f30707;
+}
+
+/* menu */
+.menu-container{
+ 
+   margin: 0 auto;
+   padding: 0 1rem;
+ }
+ 
+
+
+ .menu-btns{
+   padding: 0.6rem 0;
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+ 
+ }
+ .menu-btn{
+   /* font-family: var(--Inter); */
+   text-transform: uppercase;
+   font-size: 16px;
+   font-weight: 600;
+   background: none;
+   border: none;
+   color: #727070;
+   display: block;
+   margin: 0 1rem;
+   cursor: pointer;
+   outline: 0;
+   transition: opacity 0.4s ease-out;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+ }
+
+ .menu-btn::after{
+   content: "";
+   display: block;
+   height: 2px;
+   margin-left: auto;
+   margin-right: auto;
+   background: #ff9505;
+   margin-top: 0.5rem;
+   width: 0;
+   transition: width 0.4s ease-out;
+ }
+ .menu-btn:hover::after{
+   width: 100%;
+ }
+ .menu-btn:hover{
+   opacity: 0.8;
+ }
+ .active-btn{
+   color:  #ff9505;
+ }
+ /* .card .today-special{
+   margin-top: 11000px;
+ } */
