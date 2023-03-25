@@ -30,6 +30,7 @@ html{
    align-items: center;
    transition: 0.3s;
    padding: 1rem 7%;
+background-color: transparent;
 }
 /* .brand-title{
    margin-left: 150px;
@@ -107,21 +108,35 @@ html{
    
 }
 .home .home-slider .slide1{
-   background-image: url('img/cat-1.png');
-   width: 100%;
+   background-image: url('img/clothing.png');
+
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .home .home-slider .slide2{
-   background-image: url('img/women.png');
-   width: 100%;
+   background-image: url('img/blog-2.png');
+ 
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
 }
 .home .home-slider .slide3{
-   background-image: url('img/aviator2.png');
-   width: 100%;
+   background-image: url('img/blog-1.png');
+   
+   position: relative;
+   background-repeat: no-repeat;
+   background-size: cover;
 
 }
 .home .home-slider .slide4{
-   background-image: url('img/darkness.png');
-   width: 100%;
+   background-image: url('img/blog-3.png');
+   
+   background-attachment: fixed;
+   position: relative;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .home .home-slider .slide1,
 .home .home-slider .slide2,
@@ -325,10 +340,10 @@ span{
 }
 
 .card{
-   border: .6px solid#dbdbdb;
+   border: .6px solid#ececec;
    margin: 2rem;
    border-radius: 10px;
-   background-color: #dbdbdb;
+   background-color: #ececec;
    cursor: pointer;
    width:100%;
    /* align-items: center;
@@ -416,6 +431,23 @@ padding: 1.5rem
        color: aquamarine;
    }
    /* home slide  */
+   .home .home-slider .slide1{
+      background-image: url('img/clothing.png');
+      background-position: center center;
+   }
+   .home .home-slider .slide2{
+      background-image: url('img/blog-2.png');
+    background-position: center center;
+   }
+   .home .home-slider .slide3{
+      background-image: url('img/blog-1.png');
+      background-position: center center;
+   }
+   .home .home-slider .slide4{
+      background-image: url('img/blog-3.png');
+      background-position: center center;
+     
+   }
    /* .swiper-button-next{
       height: 2px;
       width: 2px;
@@ -454,11 +486,11 @@ display: none;
  }
  .featured{
    text-align: center;
-   margin: 10px;
+   margin: 0px;
   }
- .featured .featured-row .featured-items {
-  margin-top: 0;
-   padding: none;
+  .featured .featured-row .featured-items {
+   /* padding: 2rem; */
+   padding: .0000078rem;
 }
 
 }
@@ -493,6 +525,7 @@ display: none;
    display: flex;
    justify-content: center;
    margin-top: 2rem;
+   transition: opacity 0.4s ease-out;
  
  }
  .menu-btn{
