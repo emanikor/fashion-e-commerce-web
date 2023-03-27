@@ -29,8 +29,10 @@ html{
    justify-content: space-between;
    align-items: center;
    transition: 0.3s;
-   padding: 1rem 7%;
+ margin-right: 13%;
+ padding: 1.5rem;
 background-color: transparent;
+
 }
 /* .brand-title{
    margin-left: 150px;
@@ -97,25 +99,33 @@ background-color: transparent;
 .fa-solid{
    width: 30px;
 }
-
+.brand-title{
+   margin-left: 10%;
+   font-size: 3.7rem;
+   font-weight: 700;
+   font-family: 'Times New Roman', Times, serif;
+}
+span{
+   color: rgb(69, 136, 69);
+}
 /* home slider */
 .home .home-slider .slide{
    display: flex;
    align-items: center;
    height: 90vh;
-   justify-content: flex-start;
+   justify-content: center;
    width: 100%;
    
 }
 .home .home-slider .slide1{
-   background-image: url('img/clothing.png');
+   background-image: url('img/clothline.jpg');
 
    background-attachment: fixed;
    background-repeat: no-repeat;
    background-size: cover;
 }
 .home .home-slider .slide2{
-   background-image: url('img/blog-2.png');
+   background-image: url('img/slider_03.jpg');
  
    background-attachment: fixed;
    background-repeat: no-repeat;
@@ -151,16 +161,48 @@ background-color: transparent;
    text-align: center;
    padding: 9rem;
 }
+.home .home-slider .slide  .shopNowbtn{
+   margin-top: 1rem;
+   padding: 2rem;
+   /* width: 200px;
+   height: 50px;
+   text-align: center;
+   padding: 1rem; */
+}
+.home .home-slider .slide a:hover{
+   margin-top: 1rem;
+   padding: 2rem;
+   background-color: rgb(0, 0, 0);
+}
+.home .home-slider .slide .content .shopNowbtn a{
+   margin-top: 1rem;
+   padding: 1.4rem 4rem;
+   width: 500px;
+   text-align: center;
+    color: #000000;
+   
+   background-color: white;
+   
+   font-size: 1.6rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.home .home-slider .slide .content .shopNowbtn:hover a{
+   
+    color: #fffdfd;
+   
+   background-color: rgb(0, 0, 0);
+   
+}
 .home .home-slider .slide .slide2  h2{
    font-family: 'Metrophobic';
    font-style: normal;
    font-weight: 400;
    font-size: 36px;
    line-height: 44px;
-   text-align: justify;
+   text-align: center;
    text-transform: uppercase;
    
-   color: 000000;
+   color: #000000;
 }
 .home .home-slider .slide4 .content h2{
    font-family: 'Metrophobic';
@@ -174,21 +216,28 @@ background-color: transparent;
    color:#ffffff;
 }
 .home .home-slider .slide .content h2{
-   color: #000000;
+   color: #ffffff;
    font-size: 4rem;
-   font-weight: 600;
+   font-weight: 700;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   text-align: left;
+   text-align: center;
 }
+.swiper-button-prev,
+.swiper-button-next{
+   color: #ffffff;
+   
+}
+
 .swiper-pagination-bullet
 {
    justify-content: center;
    align-items: center;
    text-align: center;
-   background-color: #f30707;
-   width: 15px !important;
-   height: 15px !important;
+   background-color: green;
+   width: 10px !important;
+   height: 10px !important;
    border: 50px !important;
+  
 }
 
 /* end of home slider */
@@ -264,7 +313,7 @@ width: 87%;
 /* collection */
 .featured{
  text-align: center;
- margin: 80px;
+ margin: 50px;
 }
 .featured h1{
    font-size: 5rem;
@@ -281,14 +330,15 @@ width: 87%;
 }
 .featured .featured-row{
    display: grid;
-   grid-column: 2rem;
+   grid-column: 3rem;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-   padding: .1rem 2rem;
+  padding-right: 4rem;
+  padding-left: 2rem;
    
 }
 .featured .featured-row .featured-items {
-   /* padding: 2rem; */
-   padding: .5rem;
+    padding: .1rem 2rem .4rem; 
+   /* padding: .5rem; */ 
 }
 .featured .featured-row .featured-items img{
    width: 180px;
@@ -302,11 +352,7 @@ width: 87%;
  
 
 }
-span{
-   font-size: 16px;
-   margin-left: 2rem;
-   color: rgb(243, 65, 11);
-}
+
 .fa-cart-shopping{
    font-size: 2rem;
    word-spacing: 2rem;
@@ -341,7 +387,7 @@ span{
 
 .card{
    border: .6px solid#ececec;
-   margin: 2rem;
+  margin-top: 2rem;
    border-radius: 10px;
    background-color: #ececec;
    cursor: pointer;
@@ -359,7 +405,264 @@ span{
    transform: translateX(-8px);
 } */
 /* end of collection */
+/* .new-arrival{
+   margin-top: .3rem;
+} */
 
+
+/* banner-section */
+#sm-banner {
+   padding: 1rem 7%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-left: 4rem;
+   
+}
+#sm-banner .banner-box{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ background-image: url('img/art.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ width: 49%;
+ height: 60vh;
+ padding: 2rem 3rem;
+ 
+cursor: pointer;
+  
+}
+#sm-banner  .banner-box2{
+   margin-left: rem;
+   background-image: url('img/blog-2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+#sm-banner h4{
+   font-size: 2rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #ffffff;
+}
+#sm-banner h2{
+   font-size: 40px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #ffffff;
+   font-weight: 800;
+}
+#sm-banner p{
+   font-size: 1.6rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #ffffff;
+}
+#sm-banner button{
+   font-size: 2rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #ffffff;
+   background-color: transparent;
+   margin-top: 1rem;
+   width: 150px;
+   height: 50px;
+   border-radius: 3px;
+   border: 1px solid white;
+   cursor: pointer;
+}
+#sm-banner .banner-box:hover button{
+   background-color: rgb(0, 0, 0);
+   border: 1px solid rgb(8, 8, 8);
+}
+#banner3 {
+   margin-left: 4rem;
+   padding: 1rem 110px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+#banner3 .banner-box{
+   display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ background-image: url('img/blog-1.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ padding: 2rem;
+ min-width: 32%;
+ height: 45vh;
+cursor: pointer;
+}
+
+#banner3 .banner-box2{
+   background-image: url('img/men-collection.jpg');
+   /* width: 100%;
+   height: 100%; */
+}
+
+#banner3 .banner-box3{
+   background-image: url('img/women-collection.png');
+
+}
+
+#banner3 h2{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #ffffff;
+   font-weight: 400;
+   font-size: 30px;
+}
+#banner3 p{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgb(53, 122, 53);
+   font-weight: 400;
+   font-size: 20px;
+   font-weight: 500;
+}
+
+/* end of banner section */
+
+/* newletter */
+#newsLetter{
+   padding: 4rem 10%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   background-image:url('img/dior-watch.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-top: 7rem;
+   height: 35vh;
+}
+#newsLetter .newstext{
+
+   /* display: grid;
+   grid-template-columns: repeat(2, 1fr); */
+}
+#newsLetter h4{
+  font-size: 2.7rem;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 46px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+#newsLetter p{
+   font-size: 20px;
+   color: #181818;
+   font-weight: 500;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+ }
+ #newsLetter .form{
+  
+   display: flex;
+   width: 40%;
+
+ }
+ #newsLetter .form input{
+   height: 4em;
+   padding: 0 1em;
+   font-size: 14px;
+   border-radius: 2px;
+   border: 1px solid transparent;
+  width: 100%;
+  outline: none;
+   
+ }
+ #newsLetter .form button{
+   background-color: black;
+   color: #ffffff;
+   width: 150px;
+   height: 4em;
+   border-radius: 2px;
+   cursor: pointer;
+
+    
+  }
+
+/* newsletter end */
+
+/* footer section */
+
+.footer{
+  padding: 2rem 10%;
+   margin-top: 7rem ;
+   overflow: auto;
+   background-color: #13131a;
+  
+}
+.footer p{
+    margin-top: 2rem; 
+   margin-bottom: 1rem;
+   color: #ffffff;
+   font-size: 1.7rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer .footer-cols {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap:2rem;
+   column-gap: 2rem;
+   justify-content: center;
+margin-top:5rem ;
+  
+   
+}
+.footer .footer-cols li{
+list-style: none;
+line-height: 1.9;
+
+}
+.footer .footer-cols ul li a{
+list-style: none;
+
+text-decoration: none;
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 27px;
+color: #757575;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+.footer-btn {
+   margin-top: 4rem;
+}
+.footer-btn .eng-btn{
+   margin-right: 1px;
+   width: 100px;
+   height: 30px;
+   color: #ffff;
+   border: 1px solid #757575;
+  text-align: center;
+  font-size: .7rem;
+  text-decoration: none;
+  padding: 0.4rem 1.3rem .6rem;
+  margin-left: 11rem;
+}
+.footer-btn p{
+   margin-top: 2rem;
+   font-size: 13px;
+   margin-left: 11rem;
+   margin-bottom: 2rem;
+}
+.brand-footer{
+   margin-top: 1.6rem;
+   font-size: 3rem;
+   font-family:'Times New Roman', Times, serif;
+   font-weight: 700;
+   color: #979797;
+}
+.footer .apps{
+   margin-top: 0;
+   color: #b4b4b4;
+}
+/* footer section end */
 @media (max-width: 700px) {
    .toggle-button.active .bars:nth-child(2){
       opacity: 0;
@@ -379,7 +682,12 @@ span{
        transition: 0.3s;   
    }
    .brand-title{
-      width: 10px;
+   
+      
+         font-size: 2.8rem;
+         font-weight: 500;
+         font-family: 'Times New Roman', Times, serif;
+     
    }
    .navbar-links{
       display: none; 
@@ -389,7 +697,7 @@ span{
       transition: transform 0.3s ease-in;
 margin-top: 20px;
 padding: 1.5rem 
-2rem;
+ 2rem;
      
    }
    .navbar-links .active{
@@ -398,17 +706,19 @@ padding: 1.5rem
     }
 
    .navbar{
-       flex-direction: colum;
+       flex-direction: column;
        align-items: flex-start;
-      
+    
        padding: 1.5rem 2rem;
        margin-top: 10px;
+
        
    }
    .navbar-links ul{
        width: 100%;
        flex-direction: column;
        margin-top: 40px;
+       
     
      
    }
@@ -426,13 +736,29 @@ padding: 1.5rem
    .navbar-links.active{
        display: flex;
    }
-   .navbar-links li a::hover{
+   .navbar-links li a:hover{
        transition: 0.3s;
-       color: aquamarine;
+       color: rgb(98, 155, 93);
    }
+   /* end of navigation */
+
    /* home slide  */
+   .swiper-button-prev,
+.swiper-button-next{
+   color: #ffffff;
+   display: none;
+   
+}
+   .home .home-slider .slide{
+      display: flex;
+      align-items: center;
+      height: 50vh;
+      justify-content: center;
+      width: 100%;
+      
+   }
    .home .home-slider .slide1{
-      background-image: url('img/clothing.png');
+      background-image: url('img/clothline.jpg');
       background-position: center center;
    }
    .home .home-slider .slide2{
@@ -461,7 +787,7 @@ padding: 1.5rem
       font-size: 2rem;
       font-weight: 600;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: left;
+      text-align: center;
       line-height: 30px;
    }
    .home .home-slider .slide1,
@@ -492,7 +818,113 @@ display: none;
    /* padding: 2rem; */
    padding: .0000078rem;
 }
+/* banner secction */
+#sm-banner {
+   flex-direction: column;
+  margin-left: 0;
+ 
+}
+#sm-banner .banner-box{
+ background-image: url('img/art.jpg');
+ width: 95%;
+ height: 40vh;
+ margin-top: 3rem;
 
+}
+#sm-banner  .banner-box2{
+   margin-top: 1rem;
+   background-image: url('img/blog-2.png');
+}
+#sm-banner h4{
+   font-size: 1.3rem;
+   
+}
+#sm-banner h2{
+   font-size: 30px;
+ 
+   font-weight: 700;
+}
+#sm-banner button{
+   font-size: 1.4rem;
+   width: 130px;
+   height: 40px;
+ 
+}
+
+#banner3 {
+   margin-left: 1rem;
+   padding: 2rem ; 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   
+}
+#banner3 .banner-box{
+   display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ background-image: url('img/blog-1.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ padding: 2rem;
+ width: 90%;
+ height: 25vh;
+cursor: pointer;
+}
+
+#banner3 .banner-box2{
+   background-image: url('img/men-collection.png');
+   background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+   margin-top: 1rem;
+   width: 90%;
+}
+#banner3 .banner-box3{
+   background-image: url('img/women-collection.png');
+   background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+   margin-top: 1rem;
+   width: 90%;
+}
+/* end of banner */
+
+/* newsletter */
+#newsLetter{
+   margin-top: 4rem;
+   height: 35vh;
+}
+#newsLetter .form{
+   display: flex;
+   width: 100%;
+
+ }
+ #newsLetter .form input{
+   height: 3.5em;
+  width: 100%; 
+ }
+ #newsLetter .form button{
+   height: 3.5em;
+  }
+/* newsletter */
+
+/* footer */
+.footer{
+   margin-top: 3rem;
+}
+.footer .footer-cols {
+  
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap:2rem;
+   column-gap: 2rem;
+   justify-content: center;
+   
+}
+/* footer end */
 }
 /* .toggle-button .icons{
    display: flex;
