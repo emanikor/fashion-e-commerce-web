@@ -551,12 +551,11 @@ cursor: pointer;
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   background-image:url('img/dior-watch.jpg');
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+   /* background-image:url('img/dior-watch.jpg'); */
+   background-color: #1b1b29;
+   border-bottom: 1px solid white;
    margin-top: 7rem;
-   height: 35vh;
+   height: 25vh;
 }
 #newsLetter .newstext{
 
@@ -573,8 +572,8 @@ cursor: pointer;
 }
 #newsLetter p{
    font-size: 20px;
-   color: #181818;
-   font-weight: 500;
+   color: #b9b9b9;
+   font-weight: 400;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
  }
@@ -611,9 +610,9 @@ cursor: pointer;
 
 .footer{
   padding: 2rem 10%;
-   margin-top: 7rem ;
+   /* margin-top: 7rem ; */
    overflow: auto;
-   background-color: #13131a;
+   background-color:  #1b1b29;
   
 }
 .footer p{
@@ -988,8 +987,10 @@ cursor: pointer;
 
 /* newsletter */
 #newsLetter{
+   
    margin-top: 4rem;
    height: 35vh;
+
 }
 #newsLetter .form{
    display: flex;
@@ -998,7 +999,8 @@ cursor: pointer;
  }
  #newsLetter .form input{
    height: 3.5em;
-  width: 100%; 
+  width: 100%;
+ 
  }
  #newsLetter .form button{
    height: 3.5em;
@@ -1006,9 +1008,7 @@ cursor: pointer;
 /* newsletter */
 
 /* footer */
-.footer{
-   margin-top: 3rem;
-}
+
 .footer .footer-cols {
   
    display: grid;
@@ -1020,15 +1020,7 @@ cursor: pointer;
 }
 /* footer end */
 }
-/* .toggle-button .icons{
-   display: flex;
-   margin-right:1rem ;
- margin-top: 1rem;
-   transition: 0.3s;   
-} */
-/* .toggle-button .icons .fa-cart-shopping{
- margin-right: 30rem;
-} */
+
    /* end home slide */
 
 .fa-user{
@@ -1036,6 +1028,254 @@ cursor: pointer;
  font-size: 2rem;
  color: #f30707;
 }
+
+/* media query for ipad */
+@media (max-width: 860px){
+   .toggle-button.active .bars:nth-child(2){
+      opacity: 0;
+   }
+   .toggle-button.active .bars:nth-child(1){
+      transform: translateY(8px) rotate(65deg);
+     
+   }
+   .toggle-button.active .bars:nth-child(3){
+      transform: translateY(8px) rotate(-65deg);
+  
+   }
+   .toggle-button{
+       display: flex;
+       margin-right: 50px;
+     margin-top: 1rem;
+       transition: 0.3s;   
+   }
+   .brand-title{
+   
+      
+         font-size: 2.8rem;
+         font-weight: 500;
+         font-family: 'Times New Roman', Times, serif;
+     
+   }
+   .navbar-links{
+      display: none; 
+      width: 100%;
+      top:100%;
+      right: -100%;
+      transition: transform 0.3s ease-in;
+margin-top: 20px;
+padding: 1.5rem 
+ 2rem;
+     
+   }
+   .navbar-links .active{
+     
+       transition: 0.4s;
+    }
+
+   .navbar{
+       flex-direction: column;
+       align-items: flex-start;
+    
+       padding: 1.5rem 2rem;
+       margin-top: 10px;
+
+       
+   }
+   .navbar-links ul{
+       width: 100%;
+       flex-direction: column;
+       margin-top: 40px;
+       
+    
+     
+   }
+   .navbar .break{
+       width: 100%;
+       border: 3px solid white;
+   }
+   .navbar-links li{
+       text-align: center;
+       margin-top: 30px;
+   }
+   .navbar-links li a{
+       padding: .5rem 1rem;
+   }
+   .navbar-links.active{
+       display: flex;
+   }
+   .navbar-links li a:hover{
+       transition: 0.3s;
+       color: rgb(98, 155, 93);
+   }
+   /* end of navigation */
+
+   /* home slide  */
+   .swiper-button-prev,
+.swiper-button-next{
+   color: #ffffff;
+   display: none;
+   
+}
+   .home .home-slider .slide{
+      display: flex;
+      align-items: center;
+      height: 50vh;
+      justify-content: center;
+      width: 100%;
+      
+   }
+
+  
+    .home .home-slider .slide .content h2{
+      color: #000000;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      line-height: 30px;
+   }
+   .home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3,
+.home .home-slider .slide4{
+ 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+}
+.icons{
+display: none;
+}
+.home .home-slider .slide .content .shopNowbtn a{
+ 
+   padding: 1.4rem 2rem;
+   width: 500px;
+  
+}
+/* home slider end */
+/* product */
+.products{
+   margin: 20px;
+}
+.products .product-row{
+   justify-content: center;
+   align-items: center;
+ display: flex;
+margin: 10px;
+    
+ }
+
+
+
+/* product end */
+
+/* menu responsive */
+
+ .featured{
+   text-align: center;
+   margin: 0px;
+   
+  }
+ 
+  .featured .featured-row .featured-items {
+  
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+}
+
+.card{
+margin-left: 1px;
+  margin-top: 2rem;
+  width: 100%;
+
+ 
+}
+
+/* end of menu */
+/* banner secction */
+
+
+#banner3 {
+   margin-left: 3rem;
+   padding: 2rem ; 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   
+}
+#banner3 .banner-box{
+   display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ background-image: url('img/blog-1.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ padding: 2rem;
+ width: 90%;
+ height: 25vh;
+cursor: pointer;
+}
+
+#banner3 .banner-box2{
+   background-image: url('img/men-collection.png');
+   background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+   margin-top: 1rem;
+   width: 90%;
+}
+#banner3 .banner-box3{
+   background-image: url('img/women-collection.png');
+   background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+   margin-top: 1rem;
+   width: 90%;
+}
+/* end of banner */
+
+
+/* newsletter */
+
+#newsLetter .form{
+   display: flex;
+   width: 100%;
+
+ }
+ /* #newsLetter .form input{
+   height: 3.5em;
+  width: 100%;
+ 
+ }
+ #newsLetter .form button{
+   height: 3.5em;
+   width: 50%;
+  } */
+/* end of news */
+/* footer */
+
+/* .footer .footer-cols {
+  
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap:2rem;
+   column-gap: 2rem;
+   justify-content: center;
+   
+} */
+
+}
+
+
+
+
+
+
+
 
 /* menu */
 .menu-container{
