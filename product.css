@@ -108,6 +108,14 @@
  span{
     color: rgb(69, 136, 69);
  }
+ /* home section */
+ .home{
+    background-image: url('img/women-collection.jpg');
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+ }
+ /* end of home */
 
 /* product */
 .featured{
@@ -199,7 +207,99 @@
       align-items: center;
       display: flex; */
    }
+   .fa-cart-shopping{
+    font-size: 2rem;
+    word-spacing: 2rem;
+    color: rgb(243, 65, 11);
+    cursor: pointer;
+  margin-right: 3rem;
+   float: right;
+   border-radius: 50px;
+  padding: .3rem;
+   
+   
+ }
    /* end of product */
+
+   /* pagination */
+   .pagination{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+   }
+   .pagination a{
+  
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-decoration: none;
+    background-color: rgb(63, 131, 63);
+    color: #ffffff;
+    font-weight: 600;
+   }
+   /* end of paginatiom */
+
+   /* newletter */
+#newsLetter{
+    padding: 4rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* background-image:url('img/dior-watch.jpg'); */
+    background-color: #1b1b29;
+    border-bottom: 1px solid white;
+    margin-top: 7rem;
+    height: 25vh;
+ }
+ #newsLetter .newstext{
+ 
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+ }
+ #newsLetter h4{
+   font-size: 2.7rem;
+   color: #ffffff;
+   font-weight: 500;
+   line-height: 46px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+ }
+ #newsLetter p{
+    font-size: 20px;
+    color: #b9b9b9;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  #newsLetter .form{
+    margin: px;
+    display: flex;
+    width: 40%;
+ 
+ 
+  }
+  #newsLetter .form input{
+    height: 4em;
+    padding: 0 1em;
+    font-size: 14px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+   width: 100%;
+   outline: none;
+    
+  }
+  #newsLetter .form button{
+    background-color: black;
+    color: #ffffff;
+    width: 150px;
+    height: 4em;
+    border-radius: 2px;
+    cursor: pointer;
+ 
+     
+   }
+ 
+ /* newsletter end */
    /* footer */
    
 /* footer section */
@@ -423,6 +523,35 @@
     
  } */
 /* end of product */
+
+/* single product */
+#productdetails{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  #productdetails .single1-image img{
+    width: 100%;
+  }
+  #productdetails .single1-image{
+    margin-left: 10px;
+    width: 100%;
+    margin-right: 5px;
+  }
+  .small-image-group{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .small-image-col{
+    flex-basis: 24%;
+    cursor: pointer;
+  }
+  #productdetails .single-pro-details{
+    width: 100%;
+    padding: 30px;
+  }
+/* end of single product */
     /* footer */
     .footer .footer-cols {
   
@@ -433,6 +562,7 @@
    justify-content: center;
    
 }
+
     /* end of footer */
 }
     /* end of navigation */
@@ -490,3 +620,70 @@
   .active-btn{
     color:  #ff9505;
   }
+  /* single product */
+  #productdetails{
+    display: flex;
+    margin-top: 20px;
+  }
+  #productdetails .single1-image{
+    margin-left: 50px;
+    width: 40%;
+    margin-right: 50px;
+  }
+  .small-image-group{
+    display: flex;
+    justify-content: space-between;
+  }
+  .small-image-col{
+    flex-basis: 24%;
+    cursor: pointer;
+  }
+  #productdetails .single-pro-details{
+    width: 50%;
+    padding: 30px;
+  }
+#productdetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 48px;
+
+}
+#productdetails .single-pro-details h6{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #979797;
+
+}
+#productdetails .single-pro-details h2{
+   font-size: 26px;
+   padding: 0 0 20px 0;
+   color: rgb(57, 119, 57);
+
+}
+#productdetails .single-pro-details p{
+    font-size: 16px;
+ 
+ }
+ #productdetails .single-pro-details select{
+    border: 1px solid grey;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom:20px ;
+    cursor: pointer;
+ }
+ #productdetails .single-pro-details input{
+    border: 1px solid grey;
+    cursor: pointer;
+    padding-left:  10px;
+    font-size: 16px;
+    margin-right:10px ;
+    width: 50px;
+    height: 47px;
+ }
+ .cartButton{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000;
+    padding: 16px 36px;
+ }

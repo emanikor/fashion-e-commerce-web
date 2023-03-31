@@ -32,6 +32,11 @@ var swiper = new Swiper(".home-slider", {
    loop:true,
   });
 
+
+  
+
+
+
 //   menu 
 const menuBtns = document.querySelectorAll('.menu-btn');
 const foodItems = document.querySelectorAll('.card');
