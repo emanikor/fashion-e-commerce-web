@@ -41,7 +41,7 @@ var swiper = new Swiper(".home-slider", {
 const menuBtns = document.querySelectorAll('.menu-btn');
 const foodItems = document.querySelectorAll('.card');
 
-let activeBtn = "featured";
+let activeBtn = "featured-item";
 
 showFoodMenu(activeBtn);
 
@@ -70,3 +70,47 @@ function showFoodMenu(newMenuBtn){
     });
 }
 
+// cart
+
+let cart = document.querySelector('.cart');
+let cartBox = document.querySelector('.cartbox');
+let closeCart = document.querySelector('#close-cart');
+
+
+// open cart
+cart.onclick =() =>{
+    cartBox.classList.add('active');
+};
+
+// close cart
+closeCart.onclick =() =>{
+    console.log('clicked')
+    cart.classList.remove('active');
+};
+
+// cart working
+  if(document.readystate == 'loading'){
+    document.addEventListener('DOMContentLoaded', ready);
+  }
+  else{
+    ready()
+       
+
+    }
+//   making function
+
+function ready(){
+    // remove item from cart
+    var removeCartBtton =document.getElementsByClassName('cart-remove');
+    console.log(removeCartBtton);
+    for(var i =0; i< removeCartBtton.length; i++){
+        var button =removeCartBtton[i];
+        button.addEventListener('click' , removeCartBtton);
+    }
+}
+
+// remove items from cart{
+    function removeCartItem(event){
+ var buttonClicked = event.target;
+ buttonClicked.parentElement.remove();
+    }
