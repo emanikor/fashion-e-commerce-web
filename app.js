@@ -176,10 +176,10 @@ function buyButtonClicked(){
     var cartItems = document.getElementsByClassName('cart-content')[0]
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
     for (var i =0; i< cartItemsNames.length; i++){
-        alert('you have already add this item');
-        return;
+        // alert('you have already add this item');
+        // // return;
     }
-   
+
 
     var  cartBoxContent =`
    <img src="${productPic}" alt="" class="cart-img">
@@ -197,10 +197,9 @@ function buyButtonClicked(){
    cartShopBox.getElementsByClassName('cart-remove')[0].addEventListener('click', removeCartItem)
    cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener('click', quantityChanged)
 
-
    }
 
-    
+   
    
 
 
@@ -213,8 +212,7 @@ function buyButtonClicked(){
         for(var i =0; i< cartBoxes.length; i++){
             var cartBox = cartBoxes[i];
             var priceElement = cartBox.getElementsByClassName('cart-price')[0];
-            var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
-            
+            var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];  
             var price = parseFloat(priceElement.innerText.replace("$", ""));
             var quantity = quantityElement.Value ;
             total = total + (price *quantity);
