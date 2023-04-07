@@ -105,19 +105,37 @@ function ready(){
         var button =removeCartBton[i];
         button.addEventListener('click', removeCartItem);
     }
-// quantity changed 
+// quantity changes 
     var quantityInputs =document.getElementsByClassName('cart-quantity')
     for(var i =0; i< quantityInputs.length; i++){
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged);
     }
-}
-// ADD cart
-var addCart = document.getElementsByClassName('fa-cart-shopping')
-for (var i =0; i< addCart.length; i++){
+
+    // ADD cart
+    var addCart = document.getElementsByClassName('fa-cart-shopping')
+    for (var i =0; i< addCart.length; i++){
   var button =addCart[i]
   button.addEventListener('click', addCartClicked); 
 }
+
+// buy button work
+document.getElementsByClassName('btn-buy')[0].addEventListener('click', buyButtonClicked)
+}
+
+function buyButtonClicked(){
+    alert('your order is received')
+    var   cartContent= document.getElementsByClassName("cart-content")[0];
+
+    while (cartContent.hasChildNodes()){
+        cartContent.removeChild(cartContent.firstChild);
+ 
+    }
+    updateTotal();
+
+}
+
+
 
 
 // remove items from cart{
@@ -143,29 +161,31 @@ for (var i =0; i< addCart.length; i++){
     var shopProducts = button.parentElement
     var title = shopProducts.querySelectorAll('h3,price')[0].innerText;
     var price = shopProducts.getElementsByClassName('price')[0].innerText;
-    var productImg = shopProducts.querySelectorAll('img')[0].src;
-    addProductToCart(title, price, productImg );
+    var productPic= shopProducts.getElementsByClassName("product-image")[0].src;
+    addProductToCart(title, price, productPic );
+
     updateTotal();
    
    }
  
-   function addProductToCart(title, price, productImg){
+
+
+   function addProductToCart(title, price, productPic ) {
     var cartShopBox = document.createElement('div')
-    // cartShopBox.classList.add('cart-boxItem')
+    cartShopBox.classList.add('cart-boxItem')
     var cartItems = document.getElementsByClassName('cart-content')[0]
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
     for (var i =0; i< cartItemsNames.length; i++){
-        alert('you have already add this item')
+        alert('you have already add this item');
         return;
     }
    
-   }
 
-   var  cartBoxContent =`
-   <img src="img/card1.png" alt="" class="cart-img">
+    var  cartBoxContent =`
+   <img src="${productPic}" alt="" class="cart-img">
    <div class="detail-box">
-     <div class="cart-product-title">Dress</div>
-     <div class="cart-price">ksh74</div>
+     <div class="cart-product-title">${title}</div>
+     <div class="cart-price">${price}</div>
      <input type="number" value="1" class="cart-quantity">
    </div>
    <!-- remove -->
@@ -178,22 +198,29 @@ for (var i =0; i< addCart.length; i++){
    cartShopBox.getElementsByClassName('cart-quantity')[0].addEventListener('click', quantityChanged)
 
 
+   }
+
+    
+   
 
 
 
     // upload total
-    function updateTotal (){
+     function updateTotal (){
         var cartContent = document.getElementsByClassName('cart-content')[0];
         var cartBoxes =  cartContent.getElementsByClassName('cart-boxItem');
         var total= 0
         for(var i =0; i< cartBoxes.length; i++){
             var cartBox = cartBoxes[i];
-            var priceElement = cartBox.getElementsByClassName('cart-price')[0]
+            var priceElement = cartBox.getElementsByClassName('cart-price')[0];
             var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
-            var price = parseFloat(priceElement.innerText.replace("ksh", ""));
-            var quantity = quantityElement.Value 
+            
+            var price = parseFloat(priceElement.innerText.replace("$", ""));
+            var quantity = quantityElement.Value ;
             total = total + (price *quantity);
+     }
+            total = Math.round(total *100)/100;
 
-            document.getElementsByClassName('total-price')[0].innerText ="ksh" + total;
-        }
-    }
+            document.getElementsByClassName('total-price')[0].innerText ='ksh' + total;
+     }
+    
