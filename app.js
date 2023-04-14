@@ -1,18 +1,30 @@
-let toggleButton = document.querySelector('.toggle-button')
-let navbarlinks = document.querySelector('.navbar-links')
+let navBar = document.querySelector('.navbar');
 
+document.querySelector('#menu-btn').onclick = () =>{
+    navBar.classList.toggle('active');
+    cart.classList.remove('active');
+    searchBtn.classList.remove('active')
+}
+// let cartItem = document.querySelector('.cart-items-container');
 
-toggleButton.addEventListener('click' , ()=>{
-    toggleButton.classList.toggle('active');
-    navbarlinks.classList.toggle('active');
+// document.querySelector('#cart-btn').onclick = () =>{
+//     cartItem.classList.toggle('active');
+//     navBar.classList.remove('active');
+//     searchBtn.classList.remove('active')
+// }
+let searchBtn = document.querySelector('.search-form');
 
-})
-
-window.onscroll =()=>{
-  navbarlinks.classList.remove('active')
- 
+document.querySelector('#search-btn').onclick = () =>{
+    searchBtn.classList.toggle('active');
+    navBar.classList.remove('active');
+    // cartItem.classList.remove('active');
 }
 
+window.onscroll =()=>{
+    navBar.classList.remove('active');
+    // cartItem.classList.remove('active');
+    searchBtn.classList.remove('active');
+}
 // swipper
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
