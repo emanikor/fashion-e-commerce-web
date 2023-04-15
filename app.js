@@ -1,4 +1,7 @@
 let navBar = document.querySelector('.navbar');
+let header = document.querySelector('.header');
+let icon = document.querySelector('.icons');
+
 
 document.querySelector('#menu-btn').onclick = () =>{
     navBar.classList.toggle('active');
@@ -7,7 +10,7 @@ document.querySelector('#menu-btn').onclick = () =>{
 }
 // let cartItem = document.querySelector('.cart-items-container');
 
-// document.querySelector('#cart-btn').onclick = () =>{
+// document.querySelector('.cart').onclick = () =>{
 //     cartItem.classList.toggle('active');
 //     navBar.classList.remove('active');
 //     searchBtn.classList.remove('active')
@@ -17,11 +20,13 @@ let searchBtn = document.querySelector('.search-form');
 document.querySelector('#search-btn').onclick = () =>{
     searchBtn.classList.toggle('active');
     navBar.classList.remove('active');
+   
     // cartItem.classList.remove('active');
 }
 
 window.onscroll =()=>{
     navBar.classList.remove('active');
+    // icon.classList.style.Color="blue";
     // cartItem.classList.remove('active');
     searchBtn.classList.remove('active');
 }
@@ -92,6 +97,9 @@ let closeCart = document.querySelector('#close-cart');
 // open cart
 cart.onclick =() =>{
     cartBox.classList.add('active');
+    navBar.classList.remove('active');
+    searchBtn.classList.remove('active')
+
 };
 
 // close cart
@@ -129,6 +137,7 @@ function ready(){
     for (var i =0; i< addCart.length; i++){
   var button =addCart[i]
   button.addEventListener('click', addCartClicked); 
+  
 }
 
 // buy button work
@@ -197,7 +206,7 @@ function buyButtonClicked(){
    <img src="${productPic}" alt="" class="cart-img">
    <div class="detail-box">
      <div class="cart-product-title">${title}</div>
-     <div class="cart-price">${price}</div>
+     <div class="price">${price}</div>
      <input type="number" value="1" class="cart-quantity">
    </div>
    <!-- remove -->
@@ -220,17 +229,19 @@ function buyButtonClicked(){
      function updateTotal (){
         var cartContent = document.getElementsByClassName('cart-content')[0];
         var cartBoxes =  cartContent.getElementsByClassName('cart-boxItem');
-        var total= 0
+        var total= 0;
         for(var i =0; i< cartBoxes.length; i++){
             var cartBox = cartBoxes[i];
-            var priceElement = cartBox.getElementsByClassName('cart-price')[0];
-            var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];  
-            var price = parseFloat(priceElement.innerText.replace("$", ""));
+            var priceElement = cartBox.getElementsByClassName('cart-price')[0]
+            var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0] 
+            var price = parseFloat(priceElement.innerText.replace("ksh",""));
             var quantity = quantityElement.Value ;
             total = total + (price *quantity);
-     }
             total = Math.round(total *100)/100;
+            document.getElementsByClassName('total-price')[0].innerText ="ksh" + total;
+     }
+            // total = Math.round(total *100)/100;
 
-            document.getElementsByClassName('total-price')[0].innerText ='ksh' + total;
+            // document.getElementsByClassName('total-price')[0].innerText ="ksh" + total;
      }
     

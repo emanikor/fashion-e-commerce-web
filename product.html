@@ -4,46 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css" integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!---css link-->
     <link rel="stylesheet" href="product.css" class="">
     <title>Product</title>
 </head>
 <body>
-      <!------navigation section-->
-  
-  <nav class="navbar "   >
-    <div class="brand-title">Uni-<span>Soko</span></div>
-    <a href="#" class="toggle-button">
+     <!--header section--> 
+     <header class="header">
+        <a href="#" class="logo"><h1>Uni-<span>Soko</span></h1></a>
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="product.html">Product</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+    
+        </nav>
         <div class="icons">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-user"></i>
-        </div> 
-
-        <span class="bars"></span>
-        <span class="bars"></span>
-        <span class="bars"></span>
-       
-    </a>
-    <div class="navbar-links" >
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Shop</a></li>
-            <li><a href="product.html">product</a></li>
-            <li><a href="blog.html">Blog </a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <!-- <div class="icons">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-user"></i>
-            </div> -->
-        </ul>
-   
- 
-   
-</nav>
+            <div class="fa fa-search" id="search-btn"></div>
+                <div class="fa-regular fa-user" id="profile-btn"></div>
+                <div class="fas fa-shopping-cart cart" id="cart-btn"></div>
+                <div class="fas fa-bars"   id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+         <input type="search" id="search-box" placeholder="search here.."> 
+         <label for="search-box" class="fas fa-search"></label>   
+                </div> 
+                <div class="cartbox">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- content -->
+                    <div class="cart-content">
+                        <div class="cart-boxItem">
+                            
+                        </div>
+                    </div>
+                    <!-- total -->
+                    <div class="total">
+                        <div class="total-title">total</div>
+                        <div class="total-price">ksh0</div>
+                    </div>
+                    <!-- buy buuton -->
+                    <button type="button" class="btn-buy"> buy now</button>
+                    <!-- cart close -->
+                    <button id="close-cart">x</button>
+            </div>
+               </header> 
+    
+      
 
 <!-- end of navigation -->
-
 <!-- home -->
 <section class="home" id="home">
     <div class="row">
@@ -70,251 +84,282 @@
     <div>
       
         <div class="featured-row">
-            <div class="featured-items" >
-                <div class="card featured" onclick="window.location.href='sproduct.html'">
-                <img src="img/f1.jpg" alt="">
-                <div class="content">
-                    <h3>cartoon t-shirt fold</h3>
-                    <span>$74</span>
-                    <i class="fa-solid fa-cart-shopping" ></i>
-                </div>
-                </div>
-        </div>
-        <div class="featured-items">
-            <div class="card featured">
-            <img src="img/product-5.png" alt="">
-            <div class="content">
+            
+            <div class="card featured-item">
+            <img src="img/card1.png" alt=""  class="product-image">
+           
                 <h3>cartoon t-shirt fold</h3>
-                <span>$74</span>
+                <span class="price">$74</span>
                 <i class="fa-solid fa-cart-shopping"></i>
+            
             </div>
-            </div>
-    </div>
-    <div class="featured-items">
-        <div class="card featured">
-        <img src="img/product-12.png" alt="">
-        <div class="content">
-            <h3>cartoon t-shirt fold</h3>
-            <span>$74</span>
+  
+    
+        <div class="card featured-item">
+        <img src="img/card3.png" alt=""  class="product-image">
+      
+            <h3>polo hoodie</h3>
+            <span class="price">$74</span>
             <i class="fa-solid fa-cart-shopping"></i>
+       
         </div>
+
+
+    <div class="card featured-item">
+    <img src="img/card2.png" alt=""  class="product-image">
+    
+        <h3>track suit sport</h3>
+        <span class="price">$74</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+  
+    </div>
+
+
+<div class="card featured-item">
+<img src="img/card4.png" alt=""  class="product-image">
+
+    <h3>red short dress </h3>
+    <span class="price">$74</span>
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+
+<div class="card featured-item">
+<img src="img/card5.png" alt=""  class="product-image">
+
+    <h3>black leather shirt</h3>
+    <span class="price">$74</span>
+    <i class="fa-solid fa-cart-shopping"></i>
+=
+</div>
+
+
+<div class="card featured-item">
+<img src="img/card6.png" alt=""  class="product-image">
+
+    <h3>long sleeve black</h3>
+    <span class="price">$74</span>
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+
+<div class="card featured-item">
+<img src="img/card7.png" alt=""  class="product-image">
+
+    <h3>priest 11 long black sleeve </h3>
+    <span class="price">$74</span>
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+
+<div class="card featured-item">
+<img src="img/card8.png" alt=""  class="product-image">
+
+    <h3>cartoon t-shirt fold</h3>
+    <span class="price">$74</span>
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+<div class="card featured-item">
+    <img src="productimage/category-2.jpg" alt=""  class="product-image">
+    
+        <h3>cartoon t-shirt fold</h3>
+        <span class="price">$74</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+    
+    </div>
+    <div class="card featured-item">
+        <img src="productimage/gallery-2.jpg" alt=""  class="product-image">
+        
+            <h3>cartoon t-shirt fold</h3>
+            <span class="price">$74</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+        
         </div>
-</div>
-<div class="featured-items">
-    <div class="card featured">
-    <img src="img/product-13.png" alt="">
-    <div class="content">
+        <div class="card featured-item">
+            <img src="productimage/gallery-3.jpg" alt=""  class="product-image">
+            
+                <h3>cartoon t-shirt fold</h3>
+                <span class="price">$74</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            
+            </div>
+            <div class="card featured-item">
+                <img src="productimage/product-9.jpg" alt=""  class="product-image">
+                
+                    <h3>cartoon t-shirt fold</h3>
+                    <span class="price">$74</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                
+                </div>
+                <div class="card featured-item">
+                    <img src="productimage/product-5.jpg" alt=""  class="product-image">
+                    
+                        <h3>cartoon t-shirt fold</h3>
+                        <span class="price">$74</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    
+                    </div>
+                    <div class="card featured-item">
+                        <img src="productimage/product-7.jpg" alt=""  class="product-image">
+                        
+                            <h3>cartoon t-shirt fold</h3>
+                            <span class="price">$74</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        
+                        </div>
+                        <div class="card featured-item">
+                            <img src="productimage/product-9.jpg" alt=""  class="product-image">
+                            
+                                <h3>rolex 4xd 2019 black</h3>
+                                <span class="price">$74</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            
+                            </div>
+
+<!-- new arrivals -->
+
+<div class="card new-arrival">
+    <img src="productimage/4.jpg" bg="color:grey;" alt=""  class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
+    
 </div>
-<div class="featured-items">
-    <div class="card featured">
-    <img src="img/product-14.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card featured">
-    <img src="img/product-9.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card featured">
-    <img src="img/product-5.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card featured">
-    <img src="img/product-4.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<!-- best sellers -->
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-8.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-</div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-9.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-8.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-6.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-5.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-3.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-1.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<div class="featured-items">
-    <div class="card today-special">
-    <img src="img/product-2.png" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    </div>
-</div>
-<!-- end of best sellers -->
-  <!-- new arrivals -->
-  <div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n8.jpg" alt="">
-    <div class="content">
+    <img src="productimage/7.jpg" alt=""  class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+   
     </div>
-</div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n7.jpg" alt="">
-    <div class="content">
+    <img src="img/f1.jpg" alt=""   class="product-image">
+   
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+   
     </div>
-    </div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n6.jpg" alt="">
-    <div class="content">
+    <img src="productimage/16.jpg" alt=""  class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+    
     </div>
-    </div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n5.jpg" alt="">
-    <div class="content">
+    <img src="productimage/5.jpg" alt=""  class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+  
     </div>
-    </div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n4.jpg" alt="">
-    <div class="content">
+    <img src="productimage/gallery-4.jpg" alt=""   class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <<span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+  
     </div>
-    </div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n3.jpg" alt="">
-    <div class="content">
+    <img src="productimage/product-9.jpg"  width="100%" alt=""  class="product-image">
+    
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+   
     </div>
-    </div>
-</div>
-<div class="featured-items">
+
+
     <div class="card new-arrival">
-    <img src="img/n2.jpg" alt="">
-    <div class="content">
+    <img src="productimage/23.jpg" alt=""  class="product-image">
+  
         <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
+        <span class="price">$74</span>
         <i class="fa-solid fa-cart-shopping"></i>
+    
     </div>
-    </div>
-</div>
-<div class="featured-items">
     <div class="card new-arrival">
-    <img src="img/n1.jpg" alt="">
-    <div class="content">
-        <h3>cartoon t-shirt fold</h3>
-        <span>$74</span>
-        <i class="fa-solid fa-cart-shopping"></i>
+        <img src="img/card3.png" alt=""  class="product-image">
+      
+            <h3>cartoon t-shirt fold</h3>
+            <span class="price">$74</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+        
+        </div>
+        <div class="card new-arrival">
+            <img src="img/card8.png" alt=""   class="product-image">
+          
+                <h3>cartoon t-shirt fold</h3>
+                <span class="price">$74</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            
+            </div>
+            <div class="card new-arrival">
+                <img src="img/card2.png" alt=""   class="product-image">
+              
+                    <h3>cartoon t-shirt fold</h3>
+                    <span class="price">$74</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                
+                </div>
+                <div class="card new-arrival">
+                    <img src="img/card6.png" alt=""  class="product-image">
+                  
+                        <h3>cartoon t-shirt fold</h3>
+                        <span class="price">$74</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    
+                    </div>
+                    <div class="card new-arrival">
+                        <img src="img/card4.png" alt=""  class="product-image">
+                      
+                            <h3>cartoon t-shirt fold</h3>
+                            <span class="price">$74</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        
+                        </div>
+                        <div class="card new-arrival">
+                            <img src="img/card10.png" alt=""  class="product-image">
+                          
+                                <h3>cartoon t-shirt fold</h3>
+                                <span class="price">$74</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            
+                            </div>
+                            <div class="card new-arrival">
+                                <img src="img/card1.png" alt=""  class="product-image">
+                              
+                                    <h3>cartoon t-shirt fold</h3>
+                                    <span class="price">$74</span>
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                
+                                </div>
+                               
     </div>
-    </div>
-</div>
-     
-    </div>
+        </div>
+    
 </section>
 
 <!-- end of products -->
@@ -346,7 +391,7 @@
 </section>
 <!-- end of news letter -->
 <!-- footer -->
-<footer class="footer">
+<<footer class="footer">
     <!-- <div class="brand-footer"><img src="img/logo.svg" alt=""></div> -->
   
  <div class="footer-cols">
