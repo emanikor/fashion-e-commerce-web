@@ -206,7 +206,7 @@ function buyButtonClicked(){
    <img src="${productPic}" alt="" class="cart-img">
    <div class="detail-box">
      <div class="cart-product-title">${title}</div>
-     <div class="price">${price}</div>
+     <div class="cart-price">${price}</div>
      <input type="number" value="1" class="cart-quantity">
    </div>
    <!-- remove -->
@@ -230,14 +230,15 @@ function buyButtonClicked(){
         var cartContent = document.getElementsByClassName('cart-content')[0];
         var cartBoxes =  cartContent.getElementsByClassName('cart-boxItem');
         var total= 0;
+
         for(var i =0; i< cartBoxes.length; i++){
             var cartBox = cartBoxes[i];
             var priceElement = cartBox.getElementsByClassName('cart-price')[0]
             var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0] 
             var price = parseFloat(priceElement.innerText.replace("ksh",""));
             var quantity = quantityElement.Value ;
-            total = total + (price *quantity);
-            total = Math.round(total *100)/100;
+            total = total + (price * quantity);
+            total = Math.round(total * 100)/100;
             document.getElementsByClassName('total-price')[0].innerText ="ksh" + total;
      }
             // total = Math.round(total *100)/100;

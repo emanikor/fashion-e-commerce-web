@@ -86,7 +86,7 @@ margin-top: 1rem;
 }
 .header .search-form{
    position: absolute;
-   top: 115%;
+   top: 100%;
    right:7%;
    background: #FFFFFF;
    width: 50rem;
@@ -447,7 +447,7 @@ width: 87%;
    display: flex;
    justify-content: center;
    width: 250px;
-   height: 200px;
+   height: 150px;
    cursor: pointer;
    
 }
@@ -805,7 +805,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
    .header .navbar{
       position: absolute;
-      top: 80%;
+      top: 88%;
       right: -100%; 
       background: #ffffff;
       width: 20rem;
