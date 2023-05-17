@@ -197,8 +197,11 @@ function buyButtonClicked(){
     var cartItems = document.getElementsByClassName('cart-content')[0]
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
     for (var i =0; i< cartItemsNames.length; i++){
-        // alert('you have already add this item');
-        // // return;
+      
+        // MessageEvent('you have added a cart')
+        alert('you have added a cart');
+      
+        //  return;
     }
 
 
@@ -232,10 +235,10 @@ function buyButtonClicked(){
         var total= 0;
 
         for(var i =0; i< cartBoxes.length; i++){
-            var cartBox = cartBoxes[i];
+            var cartBox = cartBoxes.innerText[i];
             var priceElement = cartBox.getElementsByClassName('cart-price')[0]
             var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0] 
-            var price = parseFloat(priceElement.innerText.replace("ksh",""));
+            var price = parseFloat(priceElement.innerText.replace("ksh"," "));
             var quantity = quantityElement.Value ;
             total = total + (price * quantity);
             total = Math.round(total * 100)/100;
