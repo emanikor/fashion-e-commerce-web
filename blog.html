@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- style css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css" integrity="sha512-L+sMmtHht2t5phORf0xXFdTC0rSlML1XcraLTrABli/0MMMylsJi3XA23ReVQkZ7jLkOEIMicWGItyK4CAt2Xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!---css link-->
     <link rel="stylesheet" href="blog.css" class="">
-    <title>blog</title>
+    <title>e-commerce fashion website</title>
 </head>
 <body>
-    <nav class="navbar " >
-        <div class="brand-title">Uni-<span>Soko</span></div>
-        <a href="#" class="toggle-button">
-            <div class="icons">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-user"></i>
-            </div> 
-    
-            <span class="bars"></span>
-            <span class="bars"></span>
-            <span class="bars"></span>
-           
-        </a>
-        <div class="navbar-links" >
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Shop</a></li>
-                <li><a href="product.html">product</a></li>
-                <li><a href="blog.html">Blog </a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <!-- <div class="icons">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-solid fa-user"></i>
-                </div> -->
-            </ul>   
+   <!--header section--> 
+   <header class="header">
+    <a href="#" class="logo"><h1>Uni-<span>Soko</span></h1></a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+
     </nav>
+    <div class="icons">
+        <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa-regular fa-user" id="profile-btn"></div>
+            <div class="fas fa-shopping-cart cart" id="cart-btn"></div>
+            <div class="fas fa-bars"   id="menu-btn"></div>
+    </div>
+    <div class="search-form">
+     <input type="search" id="search-box" placeholder="search here.."> 
+     <label for="search-box" class="fas fa-search"></label>   
+            </div> 
+            <div class="cartbox">
+                <h2 class="cart-title">Your l.Cart</h2>
+                <!-- content -->
+                <div class="cart-content">
+                    <div class="cart-boxItem">
+                        
+                    </div>
+                </div>
+                <!-- total -->
+                <div class="total">
+                    <div class="total-title">total</div>
+                    <div class="total-price">0</div>
+                </div>
+                <!-- buy buuton -->
+                <button type="button" class="btn-buy"> buy now</button>
+                <!-- cart close -->
+                <button id="close-cart">x</button>
+        </div>
+           </header> 
+
+  
 
     <!-- home section -->
     <section class="home" id="home">

@@ -483,8 +483,9 @@ width: 87%;
    position: relative; 
    cursor: pointer;
    margin-top: 4rem;
+   outline: #727070;
    }
-   .featured-row .card :hover{
+   .featured-row .card:hover{
       padding: 10px;
     
       transition: 0.4s; 
@@ -897,7 +898,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
        width: 2px;
     } */
     .home .home-slider .slide .content h2{
-      color: #000000;
+      color: #ffffff;
       font-size: 2rem;
       font-weight: 600;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
